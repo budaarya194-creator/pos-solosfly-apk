@@ -31,7 +31,7 @@ jobs:
 
       - name: Ensure Android Project Wrapper
         run: |
-          flutter create . --org com.solosfly
+          flutter create . --org com.solosfly --project-name pos_solosfly --no-pub
 
       - name: Install Dependencies
         run: flutter pub get
