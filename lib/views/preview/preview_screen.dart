@@ -66,15 +66,6 @@ class _PreviewScreenState extends State<PreviewScreen> {
                 double.infinity,
                 marginAll: 4 * PdfPageFormat.mm,
               ),
-              actions: [
-                PdfPrintAction(
-                  icon: const Icon(Icons.download),
-                  onPressed: (context, build, pageFormat) async {
-                    final bytes = await build(pageFormat);
-                    await _savePdfToStorage(context, bytes, trx.invoiceNumber);
-                  },
-                ),
-              ],
             )
           : SingleChildScrollView(
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
